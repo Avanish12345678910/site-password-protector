@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Password Protector - Demo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .header {
+      text-align: center;
+      color: white;
+      margin-bottom: 40px;
+    }
+    
+    .header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    
+    .header p {
+      font-size: 20px;
+      opacity: 0.9;
+    }
+    
+    .demo-section {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+    
+    .demo-section h2 {
+      color: #667eea;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+    
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    
+    .feature-card {
+      background: #f8f9fa;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .feature-icon {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+    
+    .feature-card h3 {
+      color: #333;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    
+    .feature-card p {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    
+    .steps {
+      counter-reset: step-counter;
+      list-style: none;
+      margin-top: 20px;
+    }
+    
+    .steps li {
+      counter-increment: step-counter;
+      margin-bottom: 20px;
+      padding-left: 50px;
+      position: relative;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    
+    .steps li::before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    
+    .code-block {
+      background: #2d2d2d;
+      color: #f8f8f2;
+      padding: 20px;
+      border-radius: 8px;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    
+    .button-group {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    
+    .btn {
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    }
+    
+    .btn-secondary {
+      background: white;
+      color: #667eea;
+      border: 2px solid #667eea;
+    }
+    
+    .btn-secondary:hover {
+      background: #667eea;
+      color: white;
+    }
+    
+    .screenshot-placeholder {
+      background: #f0f0f0;
+      border: 2px dashed #ccc;
+      border-radius: 8px;
+      padding: 60px 20px;
+      text-align: center;
+      color: #999;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🔒 Site Password Protector</h1>
+      <p>Take control of your browsing with password-protected websites</p>
+    </div>
+
+    <div class="demo-section">
+      <h2>✨ Features</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🔐</div>
+          <h3>Password Protection</h3>
+          <p>Add password protection to any website with custom passwords</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">⏱️</div>
+          <h3>Session Management</h3>
+          <p>30-minute sessions after successful login for convenience</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">🎨</div>
+          <h3>Beautiful UI</h3>
+          <p>Modern gradient design with smooth animations</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">🌐</div>
+          <h3>Multi-Browser</h3>
+          <p>Works seamlessly on both Chrome and Firefox</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">💾</div>
+          <h3>Cloud Sync</h3>
+          <p>Protected sites sync across your devices</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>Secure Storage</h3>
+          <p>Passwords stored securely in browser storage</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>🚀 Chrome Installation</h2>
+      <ol class="steps">
+        <li>Open Chrome and navigate to <code>chrome://extensions/</code></li>
+        <li>Enable <strong>"Developer mode"</strong> toggle in the top-right corner</li>
+        <li>Click the <strong>"Load unpacked"</strong> button</li>
+        <li>Browse to and select the extension folder</li>
+        <li>The extension icon will appear in your browser toolbar!</li>
+      </ol>
+    </div>
+
+    <div class="demo-section">
+      <h2>🦊 Firefox Installation</h2>
+      <ol class="steps">
+        <li>Swap the manifest files for Firefox compatibility:
+          <div class="code-block">mv manifest.json manifest_chrome.json
+mv manifest_firefox.json manifest.json</div>
+        </li>
+        <li>Open Firefox and go to <code>about:debugging#/runtime/this-firefox</code></li>
+        <li>Click <strong>"Load Temporary Add-on"</strong></li>
+        <li>Select the <code>manifest.json</code> file from the extension folder</li>
+        <li>Extension loaded! (Note: temporary installation, removed on browser close)</li>
+      </ol>
+    </div>
+
+    <div class="demo-section">
+      <h2>📖 How to Use</h2>
+      <ol class="steps">
+        <li><strong>Add a Protected Site:</strong> Click the extension icon, enter a domain (e.g., facebook.com) and password</li>
+        <li><strong>Visit the Site:</strong> Navigate to the protected website in your browser</li>
+        <li><strong>Enter Password:</strong> You'll see a beautiful password prompt overlay</li>
+        <li><strong>Access Granted:</strong> Enter the correct password to unlock for 30 minutes</li>
+        <li><strong>Manage Sites:</strong> Click the extension icon to view, edit, or remove protected sites</li>
+      </ol>
+    </div>
+
+    <div class="demo-section">
+      <h2>💡 Tips & Tricks</h2>
+      <ul class="steps">
+        <li>Enter domains without <code>http://</code>, <code>https://</code>, or <code>www</code></li>
+        <li>Use the "Clear Session" button to require immediate re-authentication</li>
+        <li>Passwords are case-sensitive, so choose carefully!</li>
+        <li>Session duration can be customized in <code>background.js</code></li>
+        <li>Perfect for shared computers or parental controls</li>
+      </ul>
+    </div>
+
+    <div class="demo-section" style="text-align: center;">
+      <h2>🎯 Ready to Get Started?</h2>
+      <p style="margin: 20px 0; font-size: 18px; color: #666;">
+        Install the extension now and start protecting your favorite websites!
+      </p>
+      <div class="button-group">
+        <a href="README.md" class="btn btn-primary">Read Full Documentation</a>
+        <button class="btn btn-secondary" onclick="alert('Follow the installation steps above to install the extension!')">Install Now</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

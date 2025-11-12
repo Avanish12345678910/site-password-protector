@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Password Protector</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🔒 Site Password Protector</h1>
+      <p class="subtitle">Protect your sites with passwords</p>
+    </div>
+
+    <div class="add-site-section">
+      <h2>Add Protected Site</h2>
+      <div class="form-group">
+        <label for="domain-input">Website Domain</label>
+        <input type="text" id="domain-input" placeholder="example.com" autocomplete="off">
+        <small>Enter domain without http:// or www</small>
+      </div>
+      <div class="form-group">
+        <label for="password-input">Password</label>
+        <input type="password" id="password-input" placeholder="Enter password" autocomplete="off">
+      </div>
+      <button id="add-site-btn" class="btn btn-primary">Add Site</button>
+      <div id="message" class="message"></div>
+    </div>
+
+    <div class="sites-list-section">
+      <h2>Protected Sites</h2>
+      <div id="sites-list" class="sites-list">
+        <p class="empty-message">No protected sites yet</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

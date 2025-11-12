@@ -1,0 +1,115 @@
+╔══════════════════════════════════════════════════════════════════╗
+║         SITE PASSWORD PROTECTOR - QUICK REFERENCE CARD          ║
+╚══════════════════════════════════════════════════════════════════╝
+
+📦 WHAT IS THIS?
+  A browser extension that allows you to password-protect specific
+  websites. Perfect for shared computers, parental controls, or
+  productivity management.
+
+🚀 INSTALLATION
+  
+  Chrome:
+    1. chrome://extensions/
+    2. Enable "Developer mode"
+    3. Click "Load unpacked"
+    4. Select extension folder
+  
+  Firefox:
+    1. Swap manifest files (see INSTALL.sh)
+    2. about:debugging#/runtime/this-firefox
+    3. Click "Load Temporary Add-on"
+    4. Select manifest.json
+
+📝 USAGE
+  
+  Add Site:
+    1. Click extension icon
+    2. Enter domain (without http:// or www)
+    3. Enter password
+    4. Click "Add Site"
+  
+  Access Site:
+    1. Visit protected site
+    2. Enter password in prompt
+    3. Access granted for 30 minutes
+
+🎯 KEY FEATURES
+  
+  ✓ Custom password per website
+  ✓ Beautiful gradient UI with smooth animations
+  ✓ 30-minute session timeout
+  ✓ Session management (clear on demand)
+  ✓ Sync across devices (Chrome/Firefox sync)
+  ✓ Easy site management
+  ✓ No external servers - all local
+
+⚙️ CONFIGURATION
+  
+  Change Session Duration:
+    Edit background.js, line ~42:
+    expires: Date.now() + (30 * 60 * 1000) // milliseconds
+  
+  Customize Colors:
+    Edit popup.css and content.js
+    Search for: #667eea and #764ba2 (gradient colors)
+
+🔧 FILE STRUCTURE
+  
+  manifest.json         - Chrome extension config
+  manifest_firefox.json - Firefox extension config
+  background.js         - Background service worker
+  content.js           - Password prompt overlay
+  popup.html/css/js    - Extension popup interface
+  icons/               - Extension icons (16, 48, 128px)
+
+💡 TIPS
+  
+  • Don't include protocols (http://, https://)
+  • Don't include www subdomain
+  • Passwords are case-sensitive
+  • Use "Clear Session" for immediate logout
+  • Works with: example.com, facebook.com, youtube.com, etc.
+  • Domain format: just the hostname without path
+
+🛡️ SECURITY NOTES
+  
+  • Passwords stored in browser's sync storage
+  • Browser encrypts stored data
+  • No data sent to external servers
+  • Session tokens stored locally
+  • Sessions auto-expire after 30 minutes
+
+📖 DOCUMENTATION
+  
+  Full docs:     README.md
+  Installation:  INSTALL.sh (run for instructions)
+  Demo page:     demo.html (open in browser)
+
+🐛 TROUBLESHOOTING
+  
+  Extension not blocking?
+    → Check domain format (no http://, www, or paths)
+    → Refresh page after adding site
+  
+  Password not working?
+    → Check if password is case-sensitive
+    → Verify domain was entered correctly
+    → Try clearing session and re-entering
+  
+  Extension not loading?
+    → Check browser console (F12) for errors
+    → Verify all files are present
+    → Check manifest.json syntax
+
+🆘 SUPPORT
+  
+  Check README.md for detailed information
+  Review demo.html for visual guide
+  Run ./INSTALL.sh for installation help
+
+═══════════════════════════════════════════════════════════════════
+
+                    🔒 Happy Secure Browsing! 🔒
+
+═══════════════════════════════════════════════════════════════════
